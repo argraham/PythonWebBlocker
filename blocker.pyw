@@ -16,10 +16,9 @@ while True:
                     pass
                 else:
                     file.write(redirect + " " + website+"\n")
-
     else:
         with open(hosts_temp, "r+") as file:
-            content = file.readlines() #readlines creates a list
+            content = file.readlines() #comment deleted
             file.seek(0)
             for line in content:
                 if not any(website in line for website in website_list):
